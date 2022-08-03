@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 克拉壁纸vip
+ * @version: 0.0.1
+ * @Author: Zeman
+ * @Date: 2022-08-03 09:54:55
+ * @LastEditors: Zeman
+ * @LastEditTime: 2022-08-03 10:07:16
+ */
 var body = $response.body;
 var url = $request.url;
 var obj = JSON.parse(body);
