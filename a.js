@@ -1,2 +1,0 @@
-let dev;
-let main;
