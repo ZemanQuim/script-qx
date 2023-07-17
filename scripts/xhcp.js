@@ -4,7 +4,7 @@
  * @Author: Zeman
  * @Date: 2022-03-31 12:06:19
  * @LastEditors: Zeman
- * @LastEditTime: 2022-09-19 11:47:26
+ * @LastEditTime: 2023-07-17 11:59:09
  */
 
 var body = $response.body;
@@ -12,6 +12,7 @@ var url = $request.url;
 var obj = JSON.parse(body);
 
 const vip = '/v4/User/getUserData';
+const level = '/v4/User/getVipLevel';
 const dish = '/v4/dish/info';
 const sb = '/v4/User/getDeviceInfo';
 const bd = '/v4/User/bindVipCus';
@@ -19,6 +20,12 @@ const bd = '/v4/User/bindVipCus';
 if (url.indexOf(vip) != -1) {
   obj['data']['data']['vip']['is_open_vip'] = '1';
   obj['data']['data']['vip']['is_vip'] = '2';
+  body = JSON.stringify(obj);
+}
+
+if (url.indexOf(level) != -1) {
+  obj['data']['lelvl'] = '4';
+  obj['data']['isOnlyBuy'] = '2';
   body = JSON.stringify(obj);
 }
 
